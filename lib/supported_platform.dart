@@ -20,7 +20,6 @@ part 'android.dart';
 part 'constants.dart';
 part 'exceptions.dart';
 part 'templates.dart';
-part 'web.dart';
 
 /// Function that will be called on supported platforms to create the splash screens.
 Future<void> tryCreateSplash() async {
@@ -42,7 +41,6 @@ Future<void> tryCreateSplashByConfig(Map<String, dynamic> config) async {
     await _createAndroidSplash(
       jsonPath: jsonFile,
     );
-    await _createWebSplash(path: jsonFile);
   }
 }
 
